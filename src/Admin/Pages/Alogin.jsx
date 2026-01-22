@@ -114,7 +114,7 @@ const LoginPage = ({ onLogin }) => {
     e.preventDefault();
 
     const res = await axios.get(
-      `http://localhost:3001/Admin?email=${formData.email}`
+      `https://react-project-zdz9.onrender.com/Admin?email=${formData.email}`
     );
 
     if (res.data.length === 0) {
@@ -287,7 +287,7 @@ const ProductsList = ({ onAdd, setCurrentPage, setEditProductId }) => {
   }, [])
 
   const fetch_data1 = async () => {
-    const obj = await axios.get(`http://localhost:3001/Products`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Products`);
     setData1(obj.data)
   }
 
@@ -296,7 +296,7 @@ const ProductsList = ({ onAdd, setCurrentPage, setEditProductId }) => {
 
     const check = confirm('Are you Confirm to delete this product');
     if (check) {
-      const obj = await axios.delete(`http://localhost:3001/Products/${id}`);
+      const obj = await axios.delete(`https://react-project-zdz9.onrender.com/Products/${id}`);
       fetch_data1();
       toast.error('product delete succeessfully!!', {
         position: "bottom-right"
@@ -403,13 +403,13 @@ const AddProduct = ({ onBack }) => {
 
   const [cate, setCate] = useState([]);
   const fetch_data = async () => {
-    const obj = await axios.get(`http://localhost:3001/Categories`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Categories`);
     setCate(obj.data)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = await axios.post(`http://localhost:3001/Products`, formData);
+    const obj = await axios.post(`https://react-project-zdz9.onrender.com/Products`, formData);
     setFormData({ ...formData, name: "", category: "", price: "", stock: "", image: "", description: "", status: "" });
     toast.success('Product added successfully!');
     onBack();
@@ -554,13 +554,13 @@ const EditProduct = ({ productId, onBack }) => {
   }, []);
 
   const fetch_categories = async () => {
-    const res = await axios.get(`http://localhost:3001/Categories`);
+    const res = await axios.get(`https://react-project-zdz9.onrender.com/Categories`);
     setCate(res.data);
   };
 
   // 🔹 fetch single product
   const fetch_product = async () => {
-    const res = await axios.get(`http://localhost:3001/Products/${productId}`);
+    const res = await axios.get(`https://react-project-zdz9.onrender.com/Products/${productId}`);
     setFormData(res.data);
   };
 
@@ -571,7 +571,7 @@ const EditProduct = ({ productId, onBack }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.put(
-      `http://localhost:3001/Products/${productId}`,
+      `https://react-project-zdz9.onrender.com/Products/${productId}`,
       formData
     );
     toast.success("Product updated successfully!");
@@ -699,7 +699,7 @@ const OrdersList = () => {
   }, [])
 
   const fetch_order = async () => {
-    const obj = await axios.get(`http://localhost:3001/Orders`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Orders`);
     setOrder(obj.data)
   }
 
@@ -755,7 +755,7 @@ const UsersList = ({ onAdd, setCurrentPage, setUserId }) => {
   const [user, setUsers] = useState([]);
 
   const fetch_Users = async () => {
-    const obj = await axios.get(`http://localhost:3001/Users`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Users`);
     setUsers(obj.data)
   }
 
@@ -766,7 +766,7 @@ const UsersList = ({ onAdd, setCurrentPage, setUserId }) => {
   const deletehandle = async (id) => {
     const check = confirm('are you confirm to delete this user')
     if (check) {
-      const obj = await axios.delete(`http://localhost:3001/Users/${id}`);
+      const obj = await axios.delete(`https://react-project-zdz9.onrender.com/Users/${id}`);
       fetch_Users();
     }
     return false;
@@ -846,7 +846,7 @@ const AddUsers = ({ onBack }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = await axios.post(`http://localhost:3001/Users`, formData);
+    const obj = await axios.post(`https://react-project-zdz9.onrender.com/Users`, formData);
     setFormData({ ...formData, name: "", email: "", role: "", joined: "" });
     toast.success('Categories added successfully!');
     onBack();
@@ -934,13 +934,13 @@ const EditUsers = ({ id, onBack }) => {
   }, [])
 
   const fetch_edituser = async () => {
-    const obj = await axios.get(`http://localhost:3001/Users/${id}`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Users/${id}`);
     setFormData(obj.data);
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = await axios.put(`http://localhost:3001/Users/${id}`, formData);
+    const obj = await axios.put(`https://react-project-zdz9.onrender.com/Users/${id}`, formData);
     toast.success('User Updated successfully!');
     onBack();
   };
@@ -1023,14 +1023,14 @@ const CategoriesList = ({ onAdd, setCurrentPage, setCategorieId }) => {
 
   const [cate, setCate] = useState([]);
   const fetch_data = async () => {
-    const obj = await axios.get(`http://localhost:3001/Categories`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Categories`);
     setCate(obj.data)
   }
 
   const deletehandle = async (id) => {
     const check = confirm('Are you sure Delete category')
     if (check) {
-      const obj = await axios.delete(`http://localhost:3001/Categories/${id}`)
+      const obj = await axios.delete(`https://react-project-zdz9.onrender.com/Categories/${id}`)
     }
     else {
 
@@ -1104,7 +1104,7 @@ const AddCategories = ({ onBack }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = await axios.post(`http://localhost:3001/Categories`, formData);
+    const obj = await axios.post(`https://react-project-zdz9.onrender.com/Categories`, formData);
     setFormData({ ...formData, name: "", products: "", status: "" });
     toast.success('Categories added successfully!');
     onBack();
@@ -1188,14 +1188,14 @@ const EditCategories = ({ id, onBack }) => {
   }, [])
 
   const fetch_categories = async () => {
-    const obj = await axios.get(`http://localhost:3001/Categories/${id}`)
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Categories/${id}`)
     setFormData(obj.data)
   }
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = await axios.put(`http://localhost:3001/Categories/${id}`, formData);
+    const obj = await axios.put(`https://react-project-zdz9.onrender.com/Categories/${id}`, formData);
     toast.success('Categories Updated successfully!');
     onBack();
   };
@@ -1276,14 +1276,14 @@ const ReviewsList = () => {
 
   const [cate, setCate] = useState([]);
   const fetch_data = async () => {
-    const obj = await axios.get(`http://localhost:3001/Customer`);
+    const obj = await axios.get(`https://react-project-zdz9.onrender.com/Customer`);
     setCate(obj.data)
   }
 
   const deletehandle = async (id) => {
     const check = confirm('Are you sure Delete message')
     if (check) {
-      const obj = await axios.delete(`http://localhost:3001/Customer/${id}`)
+      const obj = await axios.delete(`https://react-project-zdz9.onrender.com/Customer/${id}`)
     }
     else {
 

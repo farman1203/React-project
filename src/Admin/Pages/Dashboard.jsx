@@ -73,9 +73,9 @@ const Dashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const ordersRes = await axios.get("http://localhost:3001/Orders");
-      const usersRes = await axios.get("http://localhost:3001/Users");
-      const productsRes = await axios.get("http://localhost:3001/Products");
+      const ordersRes = await axios.get("https://react-project-zdz9.onrender.com/Orders");
+      const usersRes = await axios.get("https://react-project-zdz9.onrender.com/Users");
+      const productsRes = await axios.get("https://react-project-zdz9.onrender.com/Products");
 
       setOrders(ordersRes.data);
       setUsers(usersRes.data);

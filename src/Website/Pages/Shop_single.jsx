@@ -15,7 +15,7 @@ const Shop_single = () => {
     }, [id]); // ✅ FIX
 
     const edit_data = async () => {
-        const obj = await axios.get(`http://localhost:3001/Products/${id}`);
+        const obj = await axios.get(`https://react-project-zdz9.onrender.com/Products/${id}`);
         setData(obj.data);
     };
 

@@ -18,7 +18,7 @@ const Contact = () => {
 
      const submitHandel = async (e) => {
         e.preventDefault();
-        const obj = await axios.post(`http://localhost:3001/Customer`,obj_cate);
+        const obj = await axios.post(`https://react-project-zdz9.onrender.com/Customer`,obj_cate);
         setData({...obj_cate,fname:"",lname:"",email:"",message:""});
         alert('Message send success');
         return false;

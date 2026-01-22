@@ -63,7 +63,7 @@ const Checkout = () => {
     };
 
     try {
-      await axios.post("http://localhost:3001/Orders", orderObj);
+      await axios.post("https://react-project-zdz9.onrender.com/Orders", orderObj);
 
       localStorage.removeItem(`cart_${userId}`);
 

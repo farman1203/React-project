@@ -17,7 +17,7 @@ const ManageProfile = () => {
     const fetchProfile = async () => {
       try {
         const Id = sessionStorage.getItem("s_id") || 1; // demo
-        const res = await axios.get(`http://localhost:3001/Users/${Id}`);
+        const res = await axios.get(`https://react-project-zdz9.onrender.com/Users/${Id}`);
         setProfile(res.data);
         setLoading(false);
       } catch (error) {
@@ -38,7 +38,7 @@ const ManageProfile = () => {
   const handleUpdate = async () => {
     try {
       const Id = sessionStorage.getItem("s_id") || 1;
-      await axios.put(`http://localhost:3001/Users/${Id}`, profile);
+      await axios.put(`https://react-project-zdz9.onrender.com/Users/${Id}`, profile);
       toast.success("Profile updated successfully ✅");
       setEditMode(false);
     } catch (error) {

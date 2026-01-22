@@ -15,7 +15,7 @@ const Shop = () => {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:3001/Products");
+    const res = await axios.get("https://react-project-zdz9.onrender.com/Products");
     setProducts(res.data);
   };
 

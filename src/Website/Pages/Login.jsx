@@ -141,7 +141,7 @@ const LoginPage = ({ onNavigateToRegister }) => {
 
     e.preventDefault();
     if (validateForm()) {
-      const obj = await axios.get(`http://localhost:3001/Users?email=${obj_cate.email}`);
+      const obj = await axios.get(`https://react-project-zdz9.onrender.com/Users?email=${obj_cate.email}`);
       //console.log(obj.data);
       if (obj.data.length > 0) {
         if (obj.data[0].password == obj_cate.password) {
