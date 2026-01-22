@@ -1,0 +1,316 @@
+{
+  "Products": [
+    {
+      "id": "1542345",
+      "name": "shoes for men",
+      "category": "Women",
+      "price": "499",
+      "stock": "120",
+      "status": "Active",
+      "size": "Medium",
+      "image": "images/shoe_1.jpg",
+      "description": "shoes for men"
+    },
+    {
+      "id": "2",
+      "name": "Polo Shirt",
+      "category": "Women",
+      "price": "999",
+      "stock": "120",
+      "status": "Active",
+      "size": "Small",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSs7mEF_Y5U869iUE7JW_alspnHAdAyjbRzRYfZjnOF38FYrtBmDvfwdzGK35yI7gEYmGJf-VpkAaw7VzCa3pAbeBX-9n9CT5NOYOJV63ApL4QktzJbJ2-8mSxtwly_6I9ptSomweM&usqp=CAc"
+    },
+    {
+      "id": "1767246349364",
+      "name": "shoes",
+      "category": "Men",
+      "price": "500",
+      "stock": "1",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS1FeLrq3869krqY8D0ZGELoDKdX7SRilAi59HV88_HlFhjmfKdRVblz8irCxWichKgR-AnfotfM_rjSutGoiz4un26ivh1ul7_W_zpD6h2KpzO96olsexY3Q",
+      "description": "shoe ",
+      "size": "Large",
+      "status": "Active"
+    },
+    {
+      "id": "1767880897903",
+      "name": "casual shoes",
+      "category": "casual shoes",
+      "price": "500",
+      "stock": "6",
+      "image": "data:image/avif;base64,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",
+      "description": "",
+      "status": "Active"
+    }
+  ],
+  "Orders": [
+    {
+      "id": "3322",
+      "userId": "1767285221865",
+      "customer": "farman ansari",
+      "billing": {
+        "name": "kj",
+        "address": "jk",
+        "phone": "jkjh",
+        "payment": "COD"
+      },
+      "items": [
+        {
+          "id": "1542345",
+          "name": "shoes for men",
+          "category": "Women",
+          "price": "499",
+          "stock": "120",
+          "status": "Active",
+          "size": "Medium",
+          "image": "images/shoe_1.jpg",
+          "description": "shoes for men",
+          "qty": 2
+        },
+        {
+          "id": "2",
+          "name": "Polo Shirt",
+          "category": "Women",
+          "price": "999",
+          "stock": "120",
+          "status": "Active",
+          "size": "Small",
+          "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSs7mEF_Y5U869iUE7JW_alspnHAdAyjbRzRYfZjnOF38FYrtBmDvfwdzGK35yI7gEYmGJf-VpkAaw7VzCa3pAbeBX-9n9CT5NOYOJV63ApL4QktzJbJ2-8mSxtwly_6I9ptSomweM&usqp=CAc",
+          "qty": 2
+        },
+        {
+          "id": "1767880897903",
+          "name": "casual shoes",
+          "category": "casual shoes",
+          "price": "500",
+          "stock": "6",
+          "image": "data:image/avif;base64,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",
+          "description": "",
+          "status": "Active",
+          "qty": 1
+        }
+      ],
+      "total": 3496,
+      "date": "20/01/2026, 15:44:51",
+      "status": "Placed"
+    },
+    {
+      "id": "3480",
+      "userId": "1767285221865",
+      "billingDetails": {
+        "fname": "farman",
+        "lname": "ansari",
+        "address": "nadiad",
+        "phone": "8866463947",
+        "payment": "COD"
+      },
+      "items": [
+        {
+          "id": "1767880897903",
+          "name": "casual shoes",
+          "category": "casual shoes",
+          "price": "500",
+          "stock": "6",
+          "image": "data:image/avif;base64,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",
+          "description": "",
+          "status": "Active",
+          "qty": 1
+        }
+      ],
+      "total": 500,
+      "status": "Pending",
+      "orderDate": "20/01/2026, 17:23:54"
+    },
+    {
+      "id": "1115",
+      "userId": "1767285221865",
+      "billingDetails": {
+        "fname": "farman",
+        "lname": "ansari",
+        "address": "nadiad",
+        "phone": "8848985",
+        "payment": "COD"
+      },
+      "items": [
+        {
+          "id": "2",
+          "name": "Polo Shirt",
+          "category": "Women",
+          "price": "999",
+          "stock": "120",
+          "status": "Active",
+          "size": "Small",
+          "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSs7mEF_Y5U869iUE7JW_alspnHAdAyjbRzRYfZjnOF38FYrtBmDvfwdzGK35yI7gEYmGJf-VpkAaw7VzCa3pAbeBX-9n9CT5NOYOJV63ApL4QktzJbJ2-8mSxtwly_6I9ptSomweM&usqp=CAc",
+          "qty": 1
+        }
+      ],
+      "total": 999,
+      "status": "Pending",
+      "customer": "farman ansari",
+      "orderDate": "20/01/2026, 17:28:08"
+    },
+    {
+      "id": "2a44",
+      "userId": "1767285221865",
+      "billingDetails": {
+        "fname": "farman",
+        "lname": "",
+        "address": "nj",
+        "phone": "489489",
+        "payment": "COD"
+      },
+      "items": [
+        {
+          "id": "2",
+          "name": "Polo Shirt",
+          "category": "Women",
+          "price": "999",
+          "stock": "120",
+          "status": "Active",
+          "size": "Small",
+          "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSs7mEF_Y5U869iUE7JW_alspnHAdAyjbRzRYfZjnOF38FYrtBmDvfwdzGK35yI7gEYmGJf-VpkAaw7VzCa3pAbeBX-9n9CT5NOYOJV63ApL4QktzJbJ2-8mSxtwly_6I9ptSomweM&usqp=CAc",
+          "qty": 1
+        }
+      ],
+      "total": 999,
+      "status": "Pending",
+      "customer": "",
+      "date": "20/01/2026, 21:12:16"
+    },
+    {
+      "id": "7a10",
+      "userId": "ee14",
+      "billingDetails": {
+        "fname": "abc ",
+        "lname": "xyz",
+        "address": "nadiad",
+        "phone": "8745612321",
+        "payment": "COD"
+      },
+      "items": [
+        {
+          "id": "1",
+          "name": "shoes for men",
+          "category": "Women",
+          "price": "499",
+          "stock": "120",
+          "status": "Active",
+          "size": "Medium",
+          "image": "images/shoe_1.jpg",
+          "description": "shoes for men"
+        },
+        {
+          "id": "2",
+          "name": "Polo Shirt",
+          "category": "Women",
+          "price": "999",
+          "stock": "120",
+          "status": "Active",
+          "size": "Small",
+          "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSs7mEF_Y5U869iUE7JW_alspnHAdAyjbRzRYfZjnOF38FYrtBmDvfwdzGK35yI7gEYmGJf-VpkAaw7VzCa3pAbeBX-9n9CT5NOYOJV63ApL4QktzJbJ2-8mSxtwly_6I9ptSomweM&usqp=CAc",
+          "qty": 1
+        }
+      ],
+      "total": 1498,
+      "status": "Pending",
+      "customer": "abc xyz",
+      "date": "20/01/2026, 21:24:57"
+    }
+  ],
+  "Users": [
+    {
+      "id": "1",
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "role": "Admin",
+      "orders": "12",
+      "password": "123",
+      "status": "Unblock",
+      "joined": "31-12-2025"
+    },
+    {
+      "id": "1767285221865",
+      "fullName": "Farman Ansari",
+      "password": "123123",
+      "email": "ansarifarman1203@gmail.com",
+      "status": "Unblock",
+      "role": "Admin"
+    },
+    {
+      "id": "1767524229402",
+      "email": "farman1203007@gmail.com",
+      "password": "123456",
+      "conpassword": "",
+      "status": "Unblock",
+      "fullName": "farman",
+      "confirmPassword": "123465",
+      "role": "customer"
+    },
+    {
+      "id": "ee14",
+      "fullName": "abc xyz",
+      "email": "abc@gmail.com",
+      "password": "112233",
+      "confirmPassword": "112233",
+      "status": "Unblock",
+      "role": "customer"
+    },
+    {
+      "id": "6541",
+      "fullName": "ayan",
+      "email": "ayan0011@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "status": "Unblock"
+    }
+  ],
+  "Categories": [
+    {
+      "id": "1767250801890",
+      "name": "Men",
+      "products": "50",
+      "status": "Active"
+    },
+    {
+      "id": "1767459968835",
+      "name": "Women",
+      "products": "25",
+      "status": "Active"
+    },
+    {
+      "id": "1767880792196",
+      "name": "casual shoes",
+      "products": "20",
+      "status": "Active"
+    }
+  ],
+  "Customer": [
+    {
+      "id": "1767525592384",
+      "fname": "abc",
+      "lname": "xyz",
+      "email": "abc@gmail.com",
+      "message": "hellooo"
+    }
+  ],
+  "Admin": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "role": "admin",
+      "password": "123",
+      "status": "Unblock",
+      "joined": "31-12-2025"
+    },
+    {
+      "id": "2",
+      "name": "Farman",
+      "email": "farman@example.com",
+      "role": "admin",
+      "password": "123",
+      "status": "Unblock",
+      "joined": "09-01-2026"
+    }
+  ]
+}
