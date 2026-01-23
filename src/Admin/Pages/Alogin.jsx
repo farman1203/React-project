@@ -57,7 +57,7 @@ const Alogin = () => {
       case 'products': return <ProductsList onAdd={() => setCurrentPage('add-product')} setCurrentPage={setCurrentPage} setEditProductId={setEditProductId} />;
       case 'add-product': return <AddProduct onBack={() => setCurrentPage('products')} />;
       case 'edit-product': return <EditProduct productId={editProductId} onBack={() => setCurrentPage('products')} />;
-      case 'orders': return <OrdersList   onAdd={() => setCurrentPage()} setCurrentPage={setCurrentPage} setEditOrderId={setEditOrderId}/>;
+      case 'orders': return <OrdersList onAdd={() => setCurrentPage()} setCurrentPage={setCurrentPage} setEditOrderId={setEditOrderId} />;
       case 'edit-order': return <EditOrder OrderId={editOrderId} onBack={() => setCurrentPage('Orders')} />;
       case 'users': return <UsersList onAdd={() => setCurrentPage('add-users')} setCurrentPage={setCurrentPage} setUserId={setUserId} />;
       case 'add-users': return <AddUsers onBack={() => setCurrentPage('users')} />;
@@ -737,7 +737,7 @@ const OrdersList = ({ onAdd, setCurrentPage, setEditOrderId }) => {
                     <button style={styles.iconBtn} title="View">
                       <Eye size={16} />
                     </button>
-                     <button
+                    <button
                       style={styles.iconBtn}
                       title="Edit"
                       onClick={() => {
@@ -745,8 +745,8 @@ const OrdersList = ({ onAdd, setCurrentPage, setEditOrderId }) => {
                         setCurrentPage('edit-order');
                       }}
                     >
-                      <Edit size={16} />  
-                    </button> 
+                      <Edit size={16} />
+                    </button>
 
                   </div>
                 </td>
@@ -764,7 +764,7 @@ const EditOrder = ({ OrderId, onBack }) => {
 
   const [order, setOrder] = useState({
     customer: "",
-    date:"",
+    date: "",
     status: "",
   });
 
@@ -791,7 +791,7 @@ const EditOrder = ({ OrderId, onBack }) => {
       order
     );
 
-    alert("Order Updated Successfully");
+    toast.success("Order Updated Successfully");
     onBack();
   };
 
@@ -809,6 +809,14 @@ const EditOrder = ({ OrderId, onBack }) => {
               type="text"
               name="customer"
               value={order.customer}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+            <input
+              type="date"
+              name="date"
+              value={order.date}
               onChange={handleChange}
               style={styles.input}
               required
@@ -832,7 +840,12 @@ const EditOrder = ({ OrderId, onBack }) => {
           </div>
 
           {/* BUTTON */}
-          <button style={styles.saveBtn}>Update Order</button>
+          <button type="submit" className='mt-5' style={styles.primaryButton}>
+            Update Order
+          </button>
+          <button type="button" onClick={onBack} style={styles.secondaryButton}>
+            Cancel
+          </button>
         </form>
       </div>
     </div>
