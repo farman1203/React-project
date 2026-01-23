@@ -34,6 +34,7 @@ const Alogin = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
+  const [editOrderId, setEditOrderId] = useState(null);
   const [editUserId, setUserId] = useState(null);
   const [editCategorieId, setCategorieId] = useState(null);
 
@@ -56,7 +57,8 @@ const Alogin = () => {
       case 'products': return <ProductsList onAdd={() => setCurrentPage('add-product')} setCurrentPage={setCurrentPage} setEditProductId={setEditProductId} />;
       case 'add-product': return <AddProduct onBack={() => setCurrentPage('products')} />;
       case 'edit-product': return <EditProduct productId={editProductId} onBack={() => setCurrentPage('products')} />;
-      case 'orders': return <OrdersList />;
+      case 'orders': return <OrdersList   onAdd={() => setCurrentPage()} setCurrentPage={setCurrentPage} setEditOrderId={setEditOrderId}/>;
+      case 'edit-order': return <EditOrder OrderId={editOrderId} onBack={() => setCurrentPage('Orders')} />;
       case 'users': return <UsersList onAdd={() => setCurrentPage('add-users')} setCurrentPage={setCurrentPage} setUserId={setUserId} />;
       case 'add-users': return <AddUsers onBack={() => setCurrentPage('users')} />;
       case 'edit-users': return <EditUsers id={editUserId} onBack={() => setCurrentPage('users')} />;
@@ -690,7 +692,7 @@ const EditProduct = ({ productId, onBack }) => {
 
 
 // Orders List Page
-const OrdersList = () => {
+const OrdersList = ({ onAdd, setCurrentPage, setEditOrderId }) => {
 
   const [dataorder, setOrder] = useState([])
 
@@ -735,15 +737,103 @@ const OrdersList = () => {
                     <button style={styles.iconBtn} title="View">
                       <Eye size={16} />
                     </button>
-                    <button style={styles.iconBtn} title="Edit">
-                      <Edit size={16} />
-                    </button>
+                     <button
+                      style={styles.iconBtn}
+                      title="Edit"
+                      onClick={() => {
+                        setEditOrderId(value.id);
+                        setCurrentPage('edit-order');
+                      }}
+                    >
+                      <Edit size={16} />  
+                    </button> 
+
                   </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+      </div>
+    </div>
+  );
+};
+
+// Edit order Page
+const EditOrder = ({ OrderId, onBack }) => {
+
+  const [order, setOrder] = useState({
+    customer: "",
+    date:"",
+    status: "",
+  });
+
+  useEffect(() => {
+    fetchOrder();
+  }, []);
+
+  const fetchOrder = async () => {
+    const res = await axios.get(
+      `https://react-project-zdz9.onrender.com/Orders/${OrderId}`
+    );
+    setOrder(res.data);
+  };
+
+  const handleChange = (e) => {
+    setOrder({ ...order, [e.target.name]: e.target.value });
+  };
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+
+    await axios.put(
+      `https://react-project-zdz9.onrender.com/Orders/${OrderId}`,
+      order
+    );
+
+    alert("Order Updated Successfully");
+    onBack();
+  };
+
+  return (
+    <div>
+      <h1 style={styles.pageTitle}>Edit Order</h1>
+
+      <div style={styles.card}>
+        <form onSubmit={handleUpdate}>
+
+          {/* CUSTOMER */}
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Customer Name</label>
+            <input
+              type="text"
+              name="customer"
+              value={order.customer}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+
+          {/* STATUS */}
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Order Status</label>
+            <select
+              name="status"
+              value={order.status}
+              onChange={handleChange}
+              style={styles.input}
+            >
+              <option value="Pending">Pending</option>
+              <option value="Processing">Processing</option>
+              <option value="Delivered">Delivered</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+
+          {/* BUTTON */}
+          <button style={styles.saveBtn}>Update Order</button>
+        </form>
       </div>
     </div>
   );
