@@ -5,7 +5,7 @@ const Index = () => {
     return (
         <div>
             <div>
-                <div className="site-blocks-cover" style={{ backgroundImage: 'url(images/hero_1.jpg)' }} data-aos="fade">
+                <div className="site-blocks-cover " style={{ backgroundImage: 'url(images/hero_1.jpg)' }} data-aos="fade">
                     <div className="container">
                         <div className="row align-items-start align-items-md-center justify-content-end">
                             <div className="col-md-5 text-center text-md-left pt-5 pt-md-0">

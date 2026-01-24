@@ -7,9 +7,6 @@ import { toast } from 'react-toastify';
 // Main App Component
 const Login = () => {
 
-
-
-
   const [currentPage, setCurrentPage] = useState('login');
 
 
@@ -252,126 +249,127 @@ const LoginPage = ({ onNavigateToRegister }) => {
 
   return (
     <div className='container'>
-    <div style={styles.authContainer}>
-      <div style={styles.authLeft}>
-        <div style={styles.authLeftContent}>
-          <div style={styles.brandSection}>
-            <div style={styles.brandIcon}>
-              <ShoppingBag size={40} color="#fff" />
+      <div style={styles.authContainer}>
+        <div style={styles.authLeft}>
+          <div style={styles.authLeftContent}>
+            <div style={styles.brandSection}>
+              <div style={styles.brandIcon}>
+                <ShoppingBag size={40} color="#fff" />
+              </div>
+              <h1 style={styles.brandTitle}>Shoppers</h1>
+              <p style={styles.brandSubtitle}>Your Perfect Shopping Destination</p>
             </div>
-            <h1 style={styles.brandTitle}>Shoppers</h1>
-            <p style={styles.brandSubtitle}>Your Perfect Shopping Destination</p>
-          </div>
-          <div style={styles.featureList}>
-            <div style={styles.featureItem}>
-              <Check size={24} color="#7971ea" />
-              <span>Free Shipping Worldwide</span>
-            </div>
-            <div style={styles.featureItem}>
-              <Check size={24} color="#7971ea" />
-              <span>Easy Returns & Refunds</span>
-            </div>
-            <div style={styles.featureItem}>
-              <Check size={24} color="#7971ea" />
-              <span>24/7 Customer Support</span>
+            <div style={styles.featureList}>
+              <div style={styles.featureItem}>
+                <Check size={24} color="#7971ea" />
+                <span>Free Shipping Worldwide</span>
+              </div>
+              <div style={styles.featureItem}>
+                <Check size={24} color="#7971ea" />
+                <span>Easy Returns & Refunds</span>
+              </div>
+              <div style={styles.featureItem}>
+                <Check size={24} color="#7971ea" />
+                <span>24/7 Customer Support</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div style={styles.authRight}>
-        <div style={styles.formContainer}>
-          <div style={styles.formHeader}>
-            <h2 style={styles.formTitle}>Welcome Back</h2>
-            <p style={styles.formSubtitle}>Please login to your account</p>
-          </div>
-
-          {alert.show && (
-            <Alert
-              message={alert.message}
-              type={alert.type}
-              onClose={() => setAlert({ show: false, message: '', type: '' })}
-            />
-          )}
-
-          <div style={styles.formWrapper}>
-            <Input
-              label="Email Address"
-              type="email"
-              name="email"
-              value={obj_cate.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              icon={Mail}
-              error={errors.email}
-            />
-
-            <Input
-              label="Password"
-              type="password"
-              name="password"
-              value={obj_cate.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              icon={Lock}
-              error={errors.password}
-              showPasswordToggle
-              showPassword={showPassword}
-              onTogglePassword={() => setShowPassword(!showPassword)}
-            />
-
-            <div style={styles.formOptions}>
-              <label style={styles.checkboxLabel}>
-                <input
-                  type="checkbox"
-                  name="rememberMe"
-                  checked={obj_cate.rememberMe}
-                  onChange={handleChange}
-                  style={styles.checkbox}
-                />
-                <span>Remember me</span>
-              </label>
-              <a href="#forgot" style={styles.forgotLink} onClick={(e) => e.preventDefault()}>
-                Forgot Password?
-              </a>
+        <div style={styles.authRight}>
+          <div style={styles.formContainer}>
+            <div style={styles.formHeader}>
+              <h2 style={styles.formTitle}>Welcome Back</h2>
+              <p style={styles.formSubtitle}>Please login to your account</p>
             </div>
 
-            <Button onClick={handleSubmit} variant="primary" fullWidth>
-              Sign In
-            </Button>
-          </div>
+            {alert.show && (
+              <Alert
+                message={alert.message}
+                type={alert.type}
+                onClose={() => setAlert({ show: false, message: '', type: '' })}
+              />
+            )}
 
-          <div style={styles.divider}>
-            <div style={styles.dividerLine}></div>
-            <span style={styles.dividerText}>OR</span>
-            <div style={styles.dividerLine}></div>
-          </div>
+            <div style={styles.formWrapper}>
+              <Input
+                label="Email Address"
+                type="email"
+                name="email"
+                value={obj_cate.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                icon={Mail}
+                error={errors.email}
+              />
 
-          <div style={styles.socialButtons}>
-            <SocialButton>
-              <GoogleIcon />
-              Continue with Google
-            </SocialButton>
-          </div>
+              <Input
+                label="Password"
+                type="password"
+                name="password"
+                value={obj_cate.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                icon={Lock}
+                error={errors.password}
+                showPasswordToggle
+                showPassword={showPassword}
+                onTogglePassword={() => setShowPassword(!showPassword)}
+              />
 
-          <p style={styles.switchAuthText}>
-            Don't have an account?{' '}
-            <button
-              onClick={onNavigateToRegister}
-              style={styles.switchAuthLink}
-            >
-              Sign Up
-              </button> <br />
-            <button
-              onClick={()=>navigate("/alogin")}
-              style={styles.switchAuthLink}
-            >
-              Admin Login Here
-            </button>
-          </p>
+              <div style={styles.formOptions}>
+                <label style={styles.checkboxLabel}>
+                  <input
+                    type="checkbox"
+                    name="rememberMe"
+                    checked={obj_cate.rememberMe}
+                    onChange={handleChange}
+                    style={styles.checkbox}
+                  />
+                  <span>Remember me</span>
+                </label>
+                <a href="#forgot" style={styles.forgotLink} onClick={(e) => e.preventDefault()}>
+                  Forgot Password?
+                </a>
+              </div>
+
+              <Button onClick={handleSubmit} variant="primary" fullWidth>
+                Sign In
+              </Button>
+            </div>
+
+            <div style={styles.divider}>
+              <div style={styles.dividerLine}></div>
+              <span style={styles.dividerText}>OR</span>
+              <div style={styles.dividerLine}></div>
+            </div>
+
+            <div style={styles.socialButtons}>
+              <SocialButton>
+                <GoogleIcon />
+                Continue with Google
+              </SocialButton>
+            </div>
+
+            <p style={styles.switchAuthText}>
+              Don't have an account?{' '}
+              <button
+                onClick={onNavigateToRegister}
+                style={styles.switchAuthLink}
+              >
+                Sign Up
+              </button>
+              <br />
+              <button
+                onClick={() => navigate("/alogin")}
+                style={styles.switchAuthLink}
+              >
+                Admin Login Here
+              </button>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
@@ -659,11 +657,11 @@ const styles = {
     minHeight: '100vh',
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
- authContainer: {
-  display: 'flex',
-  minHeight: '100vh',
-  flexDirection: isMobile ? 'column' : 'row',
-},
+  authContainer: {
+    display: 'flex',
+    minHeight: '100vh',
+    flexDirection: isMobile ? 'column' : 'row',
+  },
 
   authLeft: {
     flex: '1',

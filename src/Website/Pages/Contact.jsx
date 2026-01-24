@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const Contact = () => {
 
@@ -20,7 +21,7 @@ const Contact = () => {
         e.preventDefault();
         const obj = await axios.post(`https://react-project-zdz9.onrender.com/Customer`,obj_cate);
         setData({...obj_cate,fname:"",lname:"",email:"",message:""});
-        alert('Message send success');
+        toast.info('Message send success');
         return false;
     }
 
@@ -47,17 +48,17 @@ const Contact = () => {
                                         <div className="form-group row">
                                             <div className="col-md-6">
                                                 <label htmlFor="c_fname" className="text-black">First Name <span className="text-danger">*</span></label>
-                                                <input type="text" value={obj_cate.fname} onChange={changeHandel} className="form-control"  name="fname" />
+                                                <input type="text" required value={obj_cate.fname} onChange={changeHandel} className="form-control"  name="fname" />
                                             </div>
                                             <div className="col-md-6">
                                                 <label htmlFor="c_lname" className="text-black">Last Name <span className="text-danger">*</span></label>
-                                                <input type="text" value={obj_cate.lname} onChange={changeHandel} className="form-control" id="lname" name="lname" />
+                                                <input type="text" required value={obj_cate.lname} onChange={changeHandel} className="form-control" id="lname" name="lname" />
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <div className="col-md-12">
                                                 <label htmlFor="c_email" className="text-black">Email <span className="text-danger">*</span></label>
-                                                <input type="email" value={obj_cate.email} onChange={changeHandel}  className="form-control" id="c_email" name="email" placeholder />
+                                                <input type="email" required value={obj_cate.email} onChange={changeHandel}  className="form-control" id="c_email" name="email" placeholder />
                                             </div>
                                         </div>
                                         {/* <div className="form-group row">
@@ -69,7 +70,7 @@ const Contact = () => {
                                         <div className="form-group row">
                                             <div className="col-md-12">
                                                 <label htmlFor="c_message" className="text-black">Message </label>
-                                                <textarea name="message" value={obj_cate.message} onChange={changeHandel} id="c_message" cols={30} rows={7} className="form-control" defaultValue={""} />
+                                                <textarea name="message" required value={obj_cate.message} onChange={changeHandel} id="c_message" cols={30} rows={7} className="form-control" defaultValue={""} />
                                             </div>
                                         </div>
                                         <div className="form-group row">

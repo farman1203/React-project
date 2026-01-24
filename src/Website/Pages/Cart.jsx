@@ -75,7 +75,7 @@ const Cart = () => {
                         </div>
                     ) : (
                         <>
-                            <table className="table table-bordered">
+                            <table className="table  table-bordered">
                                 <thead>
                                     <tr>
                                         <th>Image</th>
@@ -114,11 +114,11 @@ const Cart = () => {
                                 </tbody>
                             </table>
 
-                            <div class="row">
-                                <div class="col-md-6">
+                            <div className="row">
+                                <div className="col-md-6">
                                     <div className="row mb-5">
                                         <div className="col-md-6 mb-3 mb-md-0">
-                                            <Link href="shop.jsx" className="btn btn-primary btn-sm btn-block">Update Cart</Link>
+                                            <Link href="/shop-single" className="btn btn-primary btn-sm btn-block">Update Cart</Link>
                                         </div> <div className="col-md-6">
                                             <Link to="/shop" className="btn btn-outline-primary btn-sm btn-block">Continue Shopping</Link>
                                         </div>
