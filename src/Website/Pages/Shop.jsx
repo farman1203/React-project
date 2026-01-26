@@ -86,10 +86,6 @@ const Shop = () => {
     navigate("/cart");
   };
 
-
-
-
-
   return (
     <div>
       <div className="bg-light py-3">
@@ -133,7 +129,7 @@ const Shop = () => {
                       <div className="block-4-text p-4">
                         <h3>{value.name}</h3>
                         <p className="text-primary font-weight-bold">
-                          ₹{value.price}
+                          ₹{value.price}``
                         </p>
                         <button
                           className="btn btn-sm btn-primary"
@@ -151,7 +147,6 @@ const Shop = () => {
 
             {/* FILTER SIDEBAR */}
             <div className="col-md-3 order-1 mb-5">
-
               {/* CATEGORY */}
               <div className="border p-4 rounded mb-4">
                 <h3 className="mb-3 h6 text-uppercase">Categories</h3>
