@@ -8,7 +8,7 @@
       "stock": "120",
       "status": "Active",
       "size": "Medium",
-      "image": "images/shoe_1.jpg",
+      "image": "http://localhost:5173/images/shoe_1.jpg",
       "description": "shoes for men"
     },
     {
