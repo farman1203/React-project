@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, redirect, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Pagination from '../Component/Pagination';
 
 
 const Shop = () => {
@@ -137,12 +138,12 @@ const Shop = () => {
                         >
                           Add To Cart
                         </button>
-
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
+              {/* <Pagination/> */}
             </div>
 
             {/* FILTER SIDEBAR */}
