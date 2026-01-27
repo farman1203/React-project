@@ -129,7 +129,7 @@ const Shop = () => {
                       <div className="block-4-text p-4">
                         <h3>{value.name}</h3>
                         <p className="text-primary font-weight-bold">
-                          ₹{value.price}``
+                          ₹{value.price}
                         </p>
                         <button
                           className="btn btn-sm btn-primary"

@@ -396,13 +396,14 @@ const RegisterPage = ({ onNavigateToLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const obj = await axios.post(`http://localhost:3001/Users`, obj_cate);
+      const obj = await axios.post(`https://react-project-zdz9.onrender.com/Users`, obj_cate);
       setData({ ...obj_cate, fullName: "", email: "", password: "", conpassword: "" });
       setAlert({
         show: true,
         message: 'Account created successfully! Redirecting to login...',
         type: 'success'
       });
+      toast.success('Account created successfully!');
 
       setTimeout(() => {
         setAlert({ show: false, message: '', type: '' });
@@ -496,7 +497,7 @@ const RegisterPage = ({ onNavigateToLogin }) => {
   // };
 
   return (
-    <div style={styles.authContainer}>
+    <div className='container' style={styles.authContainer}>
       <div style={styles.authLeft}>
         <div style={styles.authLeftContent}>
           <div style={styles.brandSection}>

@@ -62,7 +62,7 @@ const Alogin = () => {
       case 'users': return <UsersList onAdd={() => setCurrentPage('add-users')} setCurrentPage={setCurrentPage} setUserId={setUserId} />;
       case 'add-users': return <AddUsers onBack={() => setCurrentPage('users')} />;
       case 'edit-users': return <EditUsers id={editUserId} onBack={() => setCurrentPage('users')} />;
-      case 'categories': return <CategoriesList onAdd={() => setCurrentPage('edit-users')} setCurrentPage={setCurrentPage} setCategorieId={setCategorieId} />;
+      case 'categories': return <CategoriesList onAdd={() => setCurrentPage('add-categories')} setCurrentPage={setCurrentPage} setCategorieId={setCategorieId} />;
       case 'add-categories': return <AddCategories onBack={() => setCurrentPage('categories')} />;
       case 'edit-categories': return <EditCategories id={editCategorieId} onBack={() => setCurrentPage('categories')} />;
       case 'Customer': return <ReviewsList />;
