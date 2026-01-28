@@ -66,9 +66,7 @@ const Footer = () => {
                     <div className="row pt-5 mt-5 text-center">
                         <div className="col-md-12">
                             <p>
-                                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                                Copyright © All rights reserved | This template is made with <i className="icon-heart" aria-hidden="true" /> 
-                                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                                Copyright © All rights reserved | Designed by ❤️ with Farman
                             </p>
                         </div>
                     </div>

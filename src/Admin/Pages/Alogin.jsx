@@ -491,7 +491,7 @@ const AddProduct = ({ onBack }) => {
           </div>
           <div style={styles.formGroup}>
             <label style={styles.label}>Image URL</label>
-            <input type='url' onChange={changeHandel} value={formData.image} name='image' placeholder='Enter Image URL' />
+            <input type='url'  style={styles.input} onChange={changeHandel} value={formData.image} name='image' placeholder='Enter Image URL' />
           </div>
 
           <div style={styles.formGroup}>
