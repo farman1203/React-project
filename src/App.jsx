@@ -20,6 +20,7 @@ import User_profile from './Website/Pages/User_profile'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Edit_product from './Admin/Pages/Edit_product'
+import MyOrder from './Website/Pages/Myorder'
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
 
           <Route element={<UAfter_login />}>
             <Route path="/user_profile" element={<><Header /><User_profile /><Footer /></>}></Route>
+            <Route path="/myorder" element={<><Header /><MyOrder /><Footer /></>}></Route>
           </Route>
 
 
