@@ -309,7 +309,6 @@ const ProductsList = ({ onAdd, setCurrentPage, setEditProductId }) => {
 
   const [searchTerm, setSearchTerm] = useState('');
 
-
   return (
     <div>
       <div style={styles.pageHeader}>
@@ -318,7 +317,6 @@ const ProductsList = ({ onAdd, setCurrentPage, setEditProductId }) => {
           <Plus size={18} />
           Add New Product
         </button>
-
       </div>
 
       <div style={styles.card}>
@@ -426,7 +424,6 @@ const AddProduct = ({ onBack }) => {
     <div>
       <button onClick={onBack} style={styles.backButton}>← Back to Products</button>
       <h1 style={styles.pageTitle}>Add New Product</h1>
-
       <div style={styles.card}>
         <form onSubmit={handleSubmit} style={styles.form}>
           <div style={styles.formRow}>
@@ -491,7 +488,7 @@ const AddProduct = ({ onBack }) => {
           </div>
           <div style={styles.formGroup}>
             <label style={styles.label}>Image URL</label>
-            <input type='url'  style={styles.input} onChange={changeHandel} value={formData.image} name='image' placeholder='Enter Image URL' />
+            <input type='url' style={styles.input} onChange={changeHandel} value={formData.image} name='image' placeholder='Enter Image URL' />
           </div>
 
           <div style={styles.formGroup}>
